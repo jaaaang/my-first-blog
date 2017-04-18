@@ -2,6 +2,11 @@ from django.shortcuts import render
 from django.utils import timezone
 from .models import Post
 
-def post_list(request):
-       posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-       return render(request, 'blog/post_list.html', {'posts': posts})
+def employee_search(request):
+       employee_name = request.POST.get('emp_name', '')
+
+if employee_name == '':
+       return render(request, 'blog/search/', {'employees': ''})
+else:
+       employees == Employee.objects.filter(name=employee_name)
+       return render(request, 'blog/search/', {'employees': employees})

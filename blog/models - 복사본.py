@@ -18,7 +18,3 @@ class Post(models.Model):
 
        def __str__(self):
               return self.title
-
-class Pro(models.Model):
-       IN_NUM = models.CharField(max_length=100)
-       OUT_NUM = models.CharField(max_length=100)

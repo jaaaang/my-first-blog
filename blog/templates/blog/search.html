@@ -1,0 +1,22 @@
+<html>
+<head>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body>
+<form action="search/" method="post">
+<input type='text' name="emp_name"/>
+<input type='submit' value='Search'/>
+
+
+</form>
+
+{% for employee in employees %}
+    <div>
+        <p>이름: {{ employee.name }}</p>
+        <p>사번: {{ employee.id_no }}</p>
+    </div>
+{% endfor %}
+
+</body>
+</html>
