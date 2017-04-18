@@ -11,7 +11,7 @@ else:
        employees == Employee.objects.filter(name=employee_name)
        return render(request, 'blog/search/', {'employees': employees})
 
-def upload(request):
+def upload(req):
     if req.method == 'POST':
         if 'file' in req.FILES:
             file = req.FILES['file']
