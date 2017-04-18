@@ -10,3 +10,6 @@ if employee_name == '':
 else:
        employees == Employee.objects.filter(name=employee_name)
        return render(request, 'blog/search/', {'employees': employees})
+
+def upload(request):
+       return render(request, 'blog/upload.html', {})
