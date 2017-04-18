@@ -4,5 +4,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'', include('blog.urls')),
-    url(http://jaaaaaang.pythonanywhere.com/upload/, include('blog.urls')),
+    url(r'^upload/', include('blog.urls')),
 ]
