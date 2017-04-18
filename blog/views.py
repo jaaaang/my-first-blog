@@ -12,4 +12,14 @@ else:
        return render(request, 'blog/search/', {'employees': employees})
 
 def upload(request):
-       return render(request, 'blog/upload.html', {})
+    if req.method == 'POST':
+        if 'file' in req.FILES:
+            file = req.FILES['file']
+            filename = file._name
+
+            fp = open('%s/%s' % (C:\Users\sktelecom\Downloads, filename) , 'wb')
+            for chunk in file.chunks():
+                fp.write(chunk)
+            fp.close()
+            return HttpResponse('File Uploaded')
+    return HttpResponse('Failed to Upload File')
